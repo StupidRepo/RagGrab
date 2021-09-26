@@ -1,8 +1,4 @@
-include("autorun/rgb-shared.lua")
-
--- local shPly = RGBShared_LP
-
-function Pickup( ply, obj )
+local function Pickup( ply, obj )
 	if ( obj:IsPlayerHolding() ) then return end
     if( obj:GetClass() == "prop_ragdoll" and obj:GetPos():Distance(ply:GetPos()) <= 100 )  then
 	    ply:PickupObject( obj )
